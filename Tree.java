@@ -22,7 +22,7 @@ public class Tree {
     public void inorder(Node root) {
         if (root != null) {
             inorder(root.left);
-            System.out.println(root.nama + " (" + root.nilai + ")");
+            System.out.printf("| %-12s | %-5d |\n", root.nama, root.nilai);
             inorder(root.right);
         }
     }
@@ -40,8 +40,8 @@ public class Tree {
 public void printGenap(Node root) {
     if (root != null) {
         printGenap(root.left);
-        if (root.nilai % 20 == 0)  //  
-            System.out.println(root.nama + " [" + root.nilai + "]");
+        if (root.nilai % 20 == 0)  // kelipatan 20  
+            System.out.printf("| %-12s | %-5d |\n", root.nama, root.nilai);
         printGenap(root.right);
     }
 }
@@ -50,7 +50,7 @@ public Node searchByName(Node root, String nama) {
     if (root == null) return null;
 
     if (root.nama.equalsIgnoreCase(nama)) {
-        System.out.println(" Bunga Kesukaan: " + root.nama + " [" + root.nilai + "]");
+        System.out.println("Bunga Kesukaan: " + root.nama + " [" + root.nilai + "]");
         return root;
     }
 

@@ -11,15 +11,23 @@ public class Main {
           tree.insert("Dahlia",   60);
           tree.insert("Sakura",   80);
 
-          System.out.println(" === IN-Order Traversal =====");
+          System.out.println("=== IN-Order Traversal ===");
+          System.out.println("+--------------+-------+");
+          System.out.println("| Nama Bunga   | Nilai |");
+          System.out.println("+--------------+-------+");
           tree.inorder(tree.root);
+          System.out.println("+--------------+-------+");
 
           System.out.println("=== Tampilkan Bunga dengan Nilai Terbesar");
           Node max = tree.findMax(tree.root);
-          System.out.println("nilai terbesar: " + max.nama + " " + max.nilai);
+          System.out.println("Nilai terbesar: " + max.nama + " [" + max.nilai + "]") ;
 
           System.out.println("=== Tampilkan Genap ==="); // genap semua btw nilai bunganya mbak:)
+          System.out.println("+--------------+-------+");
+          System.out.println("| Nama Bunga   | Nilai |");
+          System.out.println("+--------------+-------+");
           tree.printGenap(tree.root);
+          System.out.println("+--------------+-------+");
 
           System.out.println("== Tampilkan bunga kesukaan  ==");
           tree.searchByName(tree.root, "Mawar");
